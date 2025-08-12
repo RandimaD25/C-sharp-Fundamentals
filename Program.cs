@@ -10,6 +10,20 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Hello, World!");
+            Console.ReadKey();
+
+            //Implicit type conversion
+            int number = 100;
+            double longNumber = number;
+
+            //Explicit type conversion
+            double price = 99.99;
+            int roundedPrice = (int)price;
+
+            Console.WriteLine(roundedPrice);
+            Console.ReadKey();
+
         }
     }
 }
