@@ -53,7 +53,24 @@ namespace ConsoleApp1
             Console.Write("Enter your age: ");
             int userAge = int.Parse(Console.ReadLine());
 
+            //String formatting
+            string fullName = "Alice";
+            int age = 30;
+            double height = 5.6;
 
+            //Basic string formatting
+            Console.WriteLine("Name: {0}, Age: {1}", fullName, age);
+            Console.ReadKey();
+
+            //Multiple placeholders
+            Console.WriteLine("{0} is {1} years old and {2} feet tall", fullName, age, height);
+            Console.ReadKey();
+
+            //Number formatting
+            double priceValue = 19.99;
+            Console.WriteLine("Price: {0:C}", priceValue); // Currency format
+            Console.WriteLine("Price: {0:F1}", priceValue); //One decimal: 20.0
+            Console.ReadKey();
 
         }
     }
