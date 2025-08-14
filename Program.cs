@@ -72,21 +72,58 @@ namespace ConsoleApp1
             //Console.WriteLine("Price: {0:F1}", priceValue); //One decimal: 20.0
             //Console.ReadKey();
 
-            //String Interpolation
-            string person_name = "Bob";
-            int person_age = 25;
-            double salary = 5000000.50;
+            ////String Interpolation
+            //string person_name = "Bob";
+            //int person_age = 25;
+            //double salary = 5000000.50;
 
-            //Basic interpolation
-            Console.WriteLine($"Hello, {person_name}");
+            ////Basic interpolation
+            //Console.WriteLine($"Hello, {person_name}");
 
-            //Expressions inside interpolation
-            Console.WriteLine($"Salary: {salary:C}"); //Currency format
-            Console.WriteLine($"Salary: {salary:F2}"); //Two decimal places
+            ////Expressions inside interpolation
+            //Console.WriteLine($"Salary: {salary:C}"); //Currency format
+            //Console.WriteLine($"Salary: {salary:F2}"); //Two decimal places
 
-            //Combining multiple values
-            Console.WriteLine($"{person_name} is {person_age} years old and earns {salary:C} per  year");
-            Console.ReadKey();
+            ////Combining multiple values
+            //Console.WriteLine($"{person_name} is {person_age} years old and earns {salary:C} per  year");
+            //Console.ReadKey();
+
+            ////Switch Statement
+            //int dayNumber = 3;
+            //switch (dayNumber)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Monday");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Tuesday");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Wednesday");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid day number");
+            //        break;
+            //}
+            //Console.ReadKey();
+
+            //New Switch Expression
+            int dayNum = 4;
+            string dayType = dayNum switch
+            {
+                1 => "Monday",
+                2 => "Tuesday",
+                3 => "Wednesday",
+                4 => "Thursday",
+                5 => "Friday",
+                6 => "Saturday",
+                7 => "Sunday",
+                _ => "Invalid day number"
+            };
+
+            Console.WriteLine(dayType);
+            Console.ReadKey();  
+
         }
     }
 }
