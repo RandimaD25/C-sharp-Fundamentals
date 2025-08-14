@@ -107,22 +107,88 @@ namespace ConsoleApp1
             //}
             //Console.ReadKey();
 
-            //New Switch Expression
-            int dayNum = 4;
-            string dayType = dayNum switch
-            {
-                1 => "Monday",
-                2 => "Tuesday",
-                3 => "Wednesday",
-                4 => "Thursday",
-                5 => "Friday",
-                6 => "Saturday",
-                7 => "Sunday",
-                _ => "Invalid day number"
-            };
+            ////New Switch Expression
+            ////int dayNum = 4;
+            ////string dayType = dayNum switch
+            ////{
+            ////    1 => "Monday",
+            ////    2 => "Tuesday",
+            ////    3 => "Wednesday",
+            ////    4 => "Thursday",
+            ////    5 => "Friday",
+            ////    6 => "Saturday",
+            ////    7 => "Sunday",
+            ////    _ => "Invalid day number"
+            ////};
 
-            Console.WriteLine(dayType);
-            Console.ReadKey();  
+            ////Console.WriteLine(dayType);
+            ////Console.ReadKey();  
+
+
+            ////Ternary operation
+            //int my_age = 26;
+            //string message = my_age >= 18 ? "Adult" : "Minor";
+            //Console.WriteLine(message);
+            //Console.ReadKey();
+
+            ////Loops
+            ////Basic For Loop
+            //for (int i = 0; i < 5; i++) {
+            //    Console.WriteLine($"Countdown: {i}");
+            //}
+
+            ////for-each Loop
+            //int[] numbers = {10, 20, 30, 40, 50};
+            //foreach(int num in numbers)
+            //{
+            //    Console.WriteLine($"Number: {num}");
+            //}
+
+            //While Loop
+            int count = 0;
+            while (count < 5)
+            {
+                Console.WriteLine($"Count: {count}");
+                count++;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadKey();
 
         }
     }
