@@ -144,22 +144,60 @@ namespace ConsoleApp1
             //    Console.WriteLine($"Number: {num}");
             //}
 
-            //While Loop
-            int count = 0;
-            while (count < 5)
+            ////While Loop
+            //int count = 0;
+            //while (count < 5)
+            //{
+            //    Console.WriteLine($"Count: {count}");
+            //    count++;
+            //}
+
+            ////Do-While Loop
+            //int index_num = 0;
+            //do
+            //{
+            //    Console.WriteLine($"Do While Count: {index_num}");
+            //    index_num++
+            //} while (index_num < 5);
+
+
+            //Methods
+            //Basic Methods
+            void SayHello()
             {
-                Console.WriteLine($"Count: {count}");
-                count++;
+                Console.WriteLine("Hello Worlds");
             }
 
+            //Method with return type
+            int GetAge()
+            {
+                return 25;
+            }
+
+            SayHello();
+            int myAge = GetAge();
+            Console.WriteLine($"My age is {myAge}");
 
 
+            //int sum1 = AddValue(10, 20);
+            //double num1 = AddValue(10.3, 2.4);
+            //string text1 = AddValue("Hello", " World");
+
+            //Console.WriteLine(sum1, num1, text1);
 
 
+            //Named Parameters
+            void CreateUser(string name, int user_age, string email)
+            {
+                Console.WriteLine($"Create User: {name}, {user_age}, {email}");
+            }
 
-
-
-
+            //Using named arguments. this can be any order
+            CreateUser(
+                name: "Randima",
+                user_age: 26,
+                email: "randima@gmail.com"
+            );
 
 
 
@@ -190,6 +228,22 @@ namespace ConsoleApp1
 
             Console.ReadKey();
 
+        }
+
+        //Method Overloading
+        static int AddValue(int a, int b)
+        {
+            return a + b;
+        }
+
+        static double AddValue(double a, double b)
+        {
+            return a + b;
+        }
+
+        static string AddValue(string a, string b)
+        {
+            return a + b;
         }
     }
 }
