@@ -187,23 +187,53 @@ namespace ConsoleApp1
 
 
             //Named Parameters
-            void CreateUser(string name, int user_age, string email)
+            //void CreateUser(string name, int user_age, string email)
+            //{
+            //    Console.WriteLine($"Create User: {name}, {user_age}, {email}");
+            //}
+
+            ////Using named arguments. this can be any order
+            //CreateUser(
+            //    name: "Randima",
+            //    user_age: 26,
+            //    email: "randima@gmail.com"
+            //);
+
+            //List
+            List<string> studentNames = new List<string>
             {
-                Console.WriteLine($"Create User: {name}, {user_age}, {email}");
+                "Alice",
+                "Bob",
+                "Nick"
+            };
+
+            //Dictionary
+            Dictionary<int, string> studentDirectory = new Dictionary<int, string>
+            {
+                {1, "Alice"},
+                {2, "Bob"},
+                {3, "Nick"}
+            };
+
+            if (studentDirectory.TryGetValue(2, out string stuName))
+            {
+                Console.WriteLine($"Student : {stuName}");
+            } else
+            {
+                Console.WriteLine("Student not found");
             }
 
-            //Using named arguments. this can be any order
-            CreateUser(
-                name: "Randima",
-                user_age: 26,
-                email: "randima@gmail.com"
-            );
+            //Get all key-value pairs
+            foreach(var student in studentDirectory)
+            {
+                Console.WriteLine($"ID: {student.Key}, Name: {student.Value}");
+            }
 
+            //Getting all keys or values
+            List<int> allKeys = studentDirectory.Keys.ToList();
+            List<string> allValues = studentDirectory.Values.ToList();
 
-
-
-
-
+            Console.WriteLine(allKeys);
 
 
 
