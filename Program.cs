@@ -233,12 +233,46 @@ namespace ConsoleApp1
             List<int> allKeys = studentDirectory.Keys.ToList();
             List<string> allValues = studentDirectory.Values.ToList();
 
-            Console.WriteLine(allKeys);
 
+            //HashSet
+            HashSet<string> uniqueSubjects = new HashSet<string>
+            {
+                "Math",
+                "Science",
+                "History",
+                "Geography",
+                "Physics",
+                "Chemistry",
+            };
 
+            //Add items using "Add" method
+            bool result = uniqueSubjects.Add("English");
+            Console.WriteLine(result);
 
+            result = uniqueSubjects.Add("Math"); // Will return false since "Math" already exists
+            Console.WriteLine(result);
 
+            HashSet<string> scienceCourses = new HashSet<string>
+            {
+                "Physics",
+                "Chemistry",
+                "Biology"
+            };
 
+            //Combine sets
+            //uniqueSubjects.UnionWith(scienceCourses);
+
+            //foreach(var course in uniqueSubjects)
+            //{
+            //    Console.WriteLine($"ForEach: {course}");
+            //}
+
+            uniqueSubjects.IntersectWith(scienceCourses);
+
+            foreach(var course in uniqueSubjects)
+            {
+                Console.WriteLine($"Intersected Course: {course}");
+            }
 
 
 
