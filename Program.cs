@@ -260,12 +260,12 @@ namespace ConsoleApp1
             };
 
             //Combine sets
-            //uniqueSubjects.UnionWith(scienceCourses);
+            uniqueSubjects.UnionWith(scienceCourses);
 
-            //foreach(var course in uniqueSubjects)
-            //{
-            //    Console.WriteLine($"ForEach: {course}");
-            //}
+            foreach (var course in uniqueSubjects)
+            {
+                Console.WriteLine($"ForEach: {course}");
+            }
 
             uniqueSubjects.IntersectWith(scienceCourses);
 
